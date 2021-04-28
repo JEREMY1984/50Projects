@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  background-color: lightgray;
+}
+.container {
+  background-color: white;
+  transition: all 0.5s ease;
+}
+.show-nav {
+  transform: rotate(-20deg);
+  transform-origin: top left;
+}
+.circle-container {
+  position: fixed;
+  top: -100px;
+  left: -100px;
+}
+.circle {
+  background-color: red;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: relative;
+}
+.circle button {
+  position: absolute;
+  background: transparent;
+  top: 80%;
+  left: 50%;
+
+  font-size: 26px;
+  cursor: pointer;
+  border: 0;
+}
+.circle button:focus {
+  outline: none;
+}
+
+.circle button#open {
+  top: 60%;
+  left: 60%;
+}
+.circle button#close {
+  top: 50%;
+  left: 10%;
+  transform: rotate(0deg);
+  transform-origin: top left;
+}
+
+.show-nav .circle {
+  transform: rotate(-70deg);
+}
+
+.content {
+  padding: 5em;
+}
+.content img {
+  max-width: 100%;
+}
+
+nav {
+  position: fixed;
+  bottom: 100px;
+  left: 20px;
+  z-index: -1;
+}
+nav ul {
+  list-style: none;
+}
+nav li {
+  font-size: 1.2em;
+  transform: translateX(-100%);
+}
+nav i {
+  margin: 10px;
+}
+.show-nav + nav li {
+  transform: translateX(0);
+}
+.show-nav + nav li + li {
+  transform: translateX(20%);
+}
+.show-nav + nav li + li + li {
+  transform: translateX(40%);
+}
