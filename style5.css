@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.bg {
+  background-image: url("https://placekitten.com/1000/1500");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+
+  z-index: -1;
+  filter: blur(20px);
+}
+
+.loadtext {
+  font-size: 2em;
+  color: white;
+}
