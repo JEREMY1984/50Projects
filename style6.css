@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #efedd6;
+  overflow-x: hidden;
+}
+h1 {
+  margin: 0.5rem;
+  text-align: center;
+}
+.box {
+  margin: 0.5em auto;
+  font-size: 1.5em;
+  width: 10em;
+  height: 8em;
+  background: steelblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  transition: transform 1s ease;
+}
+
+.box:nth-of-type(even) {
+  transform: translateX(400%);
+}
+.box:nth-of-type(odd) {
+  transform: translateX(-400%);
+}
+
+.box.show {
+  transform: translateX(0);
+}
